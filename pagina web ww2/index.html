@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Doilea Război Mondial și România (1939-1945)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <h1>Al Doilea Război Mondial</h1>
+            <p class="subtitle">România în contextul celui mai devastator conflict din istorie (1939-1945)</p>
+            <div class="authors-info">
+                <p class="students">Realizat de: Toma Alex, Marga Luiza, Bălan Timotei, Mureșan Paula</p>
+                <p class="class-info">Colegiul Național "Petru Rareș" Beclean - Clasa a XI - a i</p>
+                <p class="teacher">Profesor coordonator: Filip Florean</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <button class="menu-toggle" aria-label="Meniu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#carousel-container"><i class="fas fa-home"></i> Acasă</a></li>
+                <li><a href="#video-section"><i class="fas fa-video"></i> Video</a></li>
+                <li><a href="#quiz-section"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                <li><a href="#bibliografie"><i class="fas fa-book"></i> Bibliografie</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="video-section" class="video-section">
+        <h2>Documentar: România în Al Doilea Război Mondial</h2>
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZAyyo-YIe8M" title="Documentar despre România în Al Doilea Război Mondial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="video-caption">Acest documentar prezintă rolul României în Al Doilea Război Mondial, de la neutralitate până la consecințele postbelice.</p>
+    </div>
+
+    <div id="carousel-container" class="carousel-container">
+        <div class="carousel-title">
+            <h2>Capitole</h2>
+            <p>Navigați prin capitole folosind săgețile sau glisând</p>
+        </div>
+        
+        <div class="carousel-navigation">
+            <button class="nav-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide" data-section="introducere">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                                    <h3>Introducere</h3>
+                                    <p>Context și prezentare generală</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Introducere</h3>
+                                    <p>Contextul istoric și impactul global al celui de-al Doilea Război Mondial</p>
+                                    <button class="read-more-btn">Citește mai mult</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-slide" data-section="neutralitate">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                                    <h3>Neutralitatea</h3>
+                                    <p>România 1939-1940</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Perioada de neutralitate</h3>
+                                    <p>Eforturile României de a rămâne neutră și pierderile teritoriale din 1940</p>
+                                    <button class="read-more-btn">Citește mai mult</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-slide" data-section="axa">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                                    <h3>Alianța cu Axa</h3>
+                                    <p>România 1940-1944</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Alianța cu Puterile Axei</h3>
+                                    <p>Motivele și consecințele alianței României cu Germania nazistă</p>
+                                    <button class="read-more-btn">Citește mai mult</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-slide" data-section="front-est">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="card-icon"><i class="fas fa-fighter-jet"></i></div>
+                                    <h3>Frontul de Est</h3>
+                                    <p>Campania din Est 1941-1944</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Frontul de Est</h3>
+                                    <p>Participarea României la războiul împotriva URSS și dezastrul de la Stalingrad</p>
+                                    <button class="read-more-btn">Citește mai mult</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-slide" data-section="schimbare">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="card-icon"><i class="fas fa-sync-alt"></i></div>
+                                    <h3>Schimbarea alianței</h3>
+                                    <p>23 august 1944</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Schimbarea alianței</h3>
+                                    <p>Actul de la 23 august 1944 și întoarcerea armelor împotriva Germaniei</p>
+                                    <button class="read-more-btn">Citește mai mult</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="carousel-slide" data-section="consecinte">
+                        <div class="card">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <div class="card-icon"><i class="fas fa-landmark"></i></div>
+                                    <h3>Consecințe</h3>
+                                    <p>Impactul războiului asupra României</p>
+                                </div>
+                                <div class="card-back">
+                                    <h3>Consecințele războiului</h3>
+                                    <p>Efectele pe termen lung ale celui de-al Doilea Război Mondial asupra României</p>
+                                    <button class="read-more-btn">Citește mai mult</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="nav-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div class="carousel-indicators">
+            <span class="indicator active" data-index="0"></span>
+            <span class="indicator" data-index="1"></span>
+            <span class="indicator" data-index="2"></span>
+            <span class="indicator" data-index="3"></span>
+            <span class="indicator" data-index="4"></span>
+            <span class="indicator" data-index="5"></span>
+        </div>
+    </div>
+
+    <!-- Secțiuni de conținut detaliat - inițial ascunse -->
+    <div id="fullscreen-sections" class="fullscreen-sections">
+        <section id="introducere" class="fullscreen-section">
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> Introducere în Al Doilea Război Mondial</h2>
+                <button class="close-section"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>Al Doilea Război Mondial (1939-1945) a fost cel mai devastator conflict din istoria omenirii, implicând peste 30 de țări și provocând între 70 și 85 de milioane de victime. Pentru România, acest război a reprezentat o perioadă de mari încercări și decizii dificile, cu consecințe profunde pentru viitorul țării.</p>
+                        <p>Contextul european al anilor 1930 a fost marcat de:</p>
+                        <ul>
+                            <li>Ascensiunea regimurilor totalitare în Germania, Italia și URSS</li>
+                            <li>Politica de expansiune teritorială a Germaniei naziste</li>
+                            <li>Eșecul politicii de "appeasement" (împăciuire) a puterilor occidentale</li>
+                            <li>Tensiuni diplomatice crescânde între marile puteri</li>
+                        </ul>
+                        <p>România s-a aflat într-o poziție geopolitică extrem de dificilă, între Germania nazistă și Uniunea Sovietică, fiind nevoită să navigheze cu atenție pentru a-și proteja integritatea teritorială și independența.</p>
+                        <p>Cronologia principalelor evenimente pentru România în contextul celui de-al Doilea Război Mondial:</p>
+                        <ul>
+                            <li><strong>1939-1940:</strong> Perioada de neutralitate</li>
+                            <li><strong>1940:</strong> Pierderi teritoriale majore (Basarabia, Bucovina de Nord, Transilvania de Nord, Cadrilaterul)</li>
+                            <li><strong>1940-1944:</strong> Alianța cu Puterile Axei</li>
+                            <li><strong>1941-1943:</strong> Participarea la războiul împotriva URSS</li>
+                            <li><strong>23 august 1944:</strong> Întoarcerea armelor împotriva Germaniei</li>
+                            <li><strong>1944-1945:</strong> Participarea la războiul împotriva Germaniei naziste</li>
+                            <li><strong>1945:</strong> Sfârșitul războiului și începutul ocupației sovietice</li>
+                        </ul>
+                    </div>
+                    <div class="image-content">
+                        <figure>
+                            <img src="ww2.jpg" alt="Hartă a Europei în timpul celui de-al Doilea Război Mondial">
+                            <figcaption>Hartă a Europei în timpul celui de-al Doilea Război Mondial, evidențiind alianțele și fronturile principale</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="neutralitate" class="fullscreen-section">
+            <div class="section-header">
+                <h2><i class="fas fa-balance-scale"></i> Perioada de neutralitate (1939-1940)</h2>
+                <button class="close-section"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>La începutul celui de-al Doilea Război Mondial, România a adoptat o poziție de neutralitate, încercând să evite implicarea în conflict. Această decizie a fost influențată de:</p>
+                        <ul>
+                            <li>Dorința de a-și păstra integritatea teritorială</li>
+                            <li>Relațiile economice strânse cu Germania și Marea Britanie</li>
+                            <li>Garanțiile teritoriale oferite de Franța și Marea Britanie în aprilie 1939</li>
+                            <li>Teama de expansiunea sovietică</li>
+                        </ul>
+                        <p>Regele Carol al II-lea a încercat să mențină un echilibru diplomatic între puterile europene, dar situația României s-a complicat după:</p>
+                        <ul>
+                            <li>Înfrângerea Poloniei în septembrie 1939</li>
+                            <li>Căderea Franței în iunie 1940</li>
+                            <li>Apropierea germano-sovietică prin Pactul Ribbentrop-Molotov (23 august 1939)</li>
+                        </ul>
+                        <p>Vara anului 1940 a adus pierderi teritoriale dramatice pentru România:</p>
+                        <ul>
+                            <li><strong>28 iunie 1940:</strong> URSS anexează Basarabia și Bucovina de Nord (ultimatumul sovietic)</li>
+                            <li><strong>30 august 1940:</strong> Dictatul de la Viena - România cedează Transilvaniei de Nord Ungariei</li>
+                            <li><strong>7 septembrie 1940:</strong> Tratatul de la Craiova - România cedează Cadrilaterul Bulgariei</li>
+                        </ul>
+                        <p>Aceste pierderi teritoriale au dus la o criză politică internă majoră, care a culminat cu:</p>
+                        <ul>
+                            <li>Abdicarea Regelui Carol al II-lea (6 septembrie 1940)</li>
+                            <li>Instaurarea regimului condus de generalul Ion Antonescu</li>
+                            <li>Proclamarea Statului Național-Legionar (14 septembrie 1940)</li>
+                        </ul>
+                    </div>
+                    <div class="image-content">
+                        <figure>
+                            <img src="teritory.jpeg" alt="Harta României după pierderile teritoriale din 1940">
+                            <figcaption>Harta României după pierderile teritoriale din vara anului 1940, evidențiind teritoriile cedate URSS, Ungariei și Bulgariei</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="axa" class="fullscreen-section">
+            <div class="section-header">
+                <h2><i class="fas fa-handshake"></i> Alianța cu Puterile Axei (1940-1944)</h2>
+                <button class="close-section"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>După pierderile teritoriale din 1940 și instaurarea regimului Antonescu, România s-a orientat decisiv către Germania nazistă, considerată singura putere capabilă să ofere protecție împotriva URSS și posibilitatea recuperării teritoriilor pierdute.</p>
+                        <p>Principalele momente ale apropierii de Puterile Axei:</p>
+                        <ul>
+                            <li><strong>23 noiembrie 1940:</strong> România aderă oficial la Pactul Tripartit (alături de Germania, Italia și Japonia)</li>
+                            <li><strong>Ianuarie 1941:</strong> Rebeliunea legionară și eliminarea legionarilor din guvern</li>
+                            <li><strong>Mai-iunie 1941:</strong> Pregătiri pentru războiul împotriva URSS</li>
+                        </ul>
+                        <p>Motivele intrării României în război alături de Germania:</p>
+                        <ul>
+                            <li>Recuperarea Basarabiei și Bucovinei de Nord</li>
+                            <li>Teama de expansiunea sovietică</li>
+                            <li>Speranța recuperării Transilvaniei de Nord</li>
+                            <li>Presiunea germană și dependența economică de Germania</li>
+                        </ul>
+                        <p>Regimul Antonescu a implementat o serie de măsuri aliniate cu politicile naziste:</p>
+                        <ul>
+                            <li>Legislație antisemită și deportări ale evreilor și romilor</li>
+                            <li>Mobilizarea economiei pentru efortul de război</li>
+                            <li>Cenzură și propagandă pro-germană</li>
+                            <li>Reprimarea opoziției politice</li>
+                        </ul>
+                        <p>În această perioadă, România a devenit un important furnizor de resurse pentru mașina de război germană, în special petrol din zona Ploiești, cereale și alte materii prime strategice.</p>
+                    </div>
+                    <div class="image-content">
+                        <figure>
+                            <img src="antonescu.jpg" alt="Ion Antonescu și Adolf Hitler">
+                            <figcaption>Întâlnire între mareșalul Ion Antonescu și Adolf Hitler, simbolizând alianța României cu Germania nazistă</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="front-est" class="fullscreen-section">
+            <div class="section-header">
+                <h2><i class="fas fa-fighter-jet"></i> Participarea la războiul de pe Frontul de Est (1941-1944)</h2>
+                <button class="close-section"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>La 22 iunie 1941, România a intrat în război împotriva Uniunii Sovietice, alături de Germania nazistă, în cadrul Operațiunii Barbarossa. Mareșalul Antonescu a lansat celebrul ordin "Ostași, vă ordon: treceți Prutul!", marcând începutul campaniei pentru eliberarea Basarabiei și Bucovinei de Nord.</p>
+                        <p>Principalele etape ale participării României pe Frontul de Est:</p>
+                        <ul>
+                            <li><strong>Iunie-august 1941:</strong> Eliberarea Basarabiei și Bucovinei de Nord</li>
+                            <li><strong>August-octombrie 1941:</strong> Bătălia pentru Odessa</li>
+                            <li><strong>1942-1943:</strong> Participarea la campania din Caucaz și Stepa Calmucă</li>
+                            <li><strong>Noiembrie 1942-februarie 1943:</strong> Dezastrul de la Stalingrad</li>
+                            <li><strong>1943-1944:</strong> Lupte defensive pe teritoriul Ucrainei și Moldovei</li>
+                        </ul>
+                        <p>Contribuția României la efortul de război al Axei:</p>
+                        <ul>
+                            <li>Al treilea contingent militar ca mărime după Germania și Italia</li>
+                            <li>Aproximativ 700.000 de soldați mobilizați pe Frontul de Est</li>
+                            <li>Importante resurse economice (petrol, cereale, materii prime)</li>
+                        </ul>
+                        <p>Pierderile suferite de România pe Frontul de Est:</p>
+                        <ul>
+                            <li>Aproximativ 170.000 de morți</li>
+                            <li>Peste 300.000 de răniți</li>
+                            <li>Aproximativ 100.000 de dispăruți și prizonieri</li>
+                        </ul>
+                        <p>Bătălia de la Stalingrad (noiembrie 1942 - februarie 1943) a reprezentat un moment de cotitură, Armata a 3-a și Armata a 4-a române suferind pierderi catastrofale. După acest dezastru militar, entuziasmul pentru continuarea războiului alături de Germania a scăzut semnificativ.</p>
+                    </div>
+                    <div class="image-content">
+                        <figure>
+                            <img src="east.jpg" alt="Soldați români pe Frontul de Est">
+                            <figcaption>Soldați români în timpul luptelor de pe Frontul de Est, traversând un râu în timpul ofensivei din 1941</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schimbare" class="fullscreen-section">
+            <div class="section-header">
+                <h2><i class="fas fa-sync-alt"></i> Schimbarea alianței (23 august 1944)</h2>
+                <button class="close-section"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>Pe măsură ce situația militară a Germaniei se deteriora, opoziția internă față de regimul Antonescu și continuarea războiului alături de Germania a crescut. Regele Mihai I, împreună cu liderii partidelor istorice și Partidul Comunist, au pregătit înlăturarea lui Antonescu și ieșirea României din alianța cu Germania.</p>
+                        <p>Factori care au contribuit la decizia de schimbare a alianței:</p>
+                        <ul>
+                            <li>Înaintarea rapidă a Armatei Roșii spre granițele României</li>
+                            <li>Deteriorarea situației militare a Germaniei pe toate fronturile</li>
+                            <li>Bombardamentele aliate asupra României (în special asupra zonei petroliere Ploiești)</li>
+                            <li>Contactele diplomatice secrete cu Aliații</li>
+                            <li>Teama de ocupație sovietică totală</li>
+                        </ul>
+                        <p>Evenimentele de la 23 august 1944:</p>
+                        <ul>
+                            <li>Regele Mihai l-a convocat pe mareșalul Antonescu la Palatul Regal</li>
+                            <li>Antonescu a fost arestat după ce a refuzat să semneze armistițiul cu Aliații</li>
+                            <li>Regele a anunțat la radio ieșirea României din alianța cu Germania și încetarea ostilităților împotriva Națiunilor Unite</li>
+                            <li>Armata română a primit ordin să nu mai opună rezistență trupelor sovietice</li>
+                        </ul>
+                        <p>Consecințele imediate ale actului de la 23 august:</p>
+                        <ul>
+                            <li>Trupele germane au încercat să ocupe Bucureștiul, dar au fost respinse</li>
+                            <li>România a declarat război Germaniei (25 august 1944)</li>
+                            <li>Armata română s-a alăturat Armatei Roșii în luptele împotriva trupelor germane</li>
+                            <li>Formarea unui guvern de coaliție condus de generalul Constantin Sănătescu</li>
+                        </ul>
+                        <p>Actul de la 23 august 1944 a scurtat războiul cu aproximativ 6 luni, conform estimărilor istoricilor, și a avut un impact strategic major asupra frontului din sud-estul Europei.</p>
+                    </div>
+                    <div class="image-content">
+                        <figure>
+                            <img src="mihai.jpg" alt="Regele Mihai I al României">
+                            <figcaption>Regele Mihai I al României, principalul artizan al actului de la 23 august 1944, care a schimbat cursul războiului pentru România</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consecinte" class="fullscreen-section">
+            <div class="section-header">
+                <h2><i class="fas fa-landmark"></i> Consecințele războiului pentru România</h2>
+                <button class="close-section"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="section-content">
+                <div class="content-grid">
+                    <div class="text-content">
+                        <p>După schimbarea alianței, România a participat activ la luptele împotriva Germaniei naziste, contribuind la eliberarea propriului teritoriu, precum și a Ungariei, Cehoslovaciei și Austriei. Această participare a avut ca scop îmbunătățirea poziției României la viitoarea conferință de pace.</p>
+                        <p>Contribuția României la victoria Aliaților (august 1944 - mai 1945):</p>
+                        <ul>
+                            <li>Mobilizarea a peste 538.000 de soldați</li>
+                            <li>Participarea la eliberarea Transilvaniei, Ungariei, Cehoslovaciei și Austriei</li>
+                            <li>Aproximativ 170.000 de soldați români morți, răniți sau dispăruți în această perioadă</li>
+                        </ul>
+                        <p>Armistițiul de la Moscova (12 septembrie 1944) a impus României condiții dure:</p>
+                        <ul>
+                            <li>Cedarea Basarabiei și Bucovinei de Nord către URSS</li>
+                            <li>Plata unor reparații de război de 300 milioane de dolari către URSS</li>
+                            <li>Anularea Dictatului de la Viena și revenirea Transilvaniei de Nord la România</li>
+                            <li>Prezența Comisiei Aliate de Control (dominată de URSS) pe teritoriul României</li>
+                        </ul>
+                        <p>Tratatul de Pace de la Paris (10 februarie 1947) a confirmat majoritatea prevederilor armistițiului și a marcat sfârșitul oficial al stării de război pentru România.</p>
+                        <p>Consecințele pe termen lung ale războiului pentru România:</p>
+                        <ul>
+                            <li>Pierderi umane: aproximativ 800.000 de morți (militari și civili)</li>
+                            <li>Pierderi materiale estimate la 3,7 miliarde de dolari (la valoarea din 1938)</li>
+                            <li>Pierderi teritoriale: Basarabia, Bucovina de Nord și Ținutul Herța</li>
+                            <li>Ocupația sovietică și instaurarea regimului comunist</li>
+                            <li>Izolarea de lumea occidentală pentru următoarele patru decenii</li>
+                        </ul>
+                        <p>Al Doilea Război Mondial a reprezentat o tragedie pentru România, dar și un moment de afirmare a voinței naționale prin actul de la 23 august 1944, care a permis țării să se numere, în final, printre națiunile învingătoare, deși cu un statut ambiguu de "cobeligerant".</p>
+                    </div>
+                    <div class="image-content">
+                        <figure>
+                            <img src="soviet.jpg" alt="Soldați români și sovietici în 1944">
+                            <figcaption>Soldați români și sovietici colaborând după 23 august 1944 în luptele împotriva trupelor germane</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Secțiunea de Quiz Unificat -->
+    <div id="quiz-section" class="quiz-section">
+        <div class="quiz-header">
+            <h2><i class="fas fa-question-circle"></i> Quiz: Al Doilea Război Mondial și România</h2>
+            <p>Testează-ți cunoștințele despre participarea României la Al Doilea Război Mondial</p>
+        </div>
+        
+        <div class="quiz-container">
+            <div id="quiz-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Întrebarea <span id="current-question">1</span> din <span id="total-questions">18</span></div>
+            </div>
+            
+            <div id="quiz-content">
+                <!-- Întrebările vor fi generate dinamic prin JavaScript -->
+            </div>
+            
+            <div class="quiz-controls">
+                <button id="prev-question" class="quiz-nav-btn" disabled><i class="fas fa-arrow-left"></i> Înapoi</button>
+                <button id="next-question" class="quiz-nav-btn">Înainte <i class="fas fa-arrow-right"></i></button>
+                <button id="submit-quiz" class="submit-btn" style="display: none;">Finalizează quiz-ul</button>
+            </div>
+        </div>
+        
+        <div id="quiz-results" class="quiz-results" style="display: none;">
+            <h3>Rezultatele tale</h3>
+            <div class="results-score">
+                <div class="score-circle">
+                    <span id="score-percentage">0%</span>
+                </div>
+                <p>Ai răspuns corect la <span id="correct-answers">0</span> din <span id="total-questions-result">18</span> întrebări.</p>
+            </div>
+            <div class="results-feedback" id="results-feedback">
+                <!-- Feedback-ul va fi generat dinamic -->
+            </div>
+            <button id="restart-quiz" class="restart-btn">Încearcă din nou</button>
+        </div>
+    </div>
+
+    <section id="bibliografie" class="bibliografie-section">
+        <div class="section-header">
+            <h2><i class="fas fa-book"></i> Bibliografie și Webografie</h2>
+        </div>
+        <div class="section-content">
+            <div class="content-grid">
+                <div class="text-content full-width">
+                    <h3>Bibliografie:</h3>
+                    <ul class="bibliography-list">
+                        <li>Deletant, Dennis - <em>Hitler's Forgotten Ally: Ion Antonescu and His Regime, Romania 1940-1944</em>, Palgrave Macmillan, 2006</li>
+                        <li>Giurescu, Dinu C. - <em>România în al Doilea Război Mondial</em>, Editura ALL, București, 1999</li>
+                        <li>Scurtu, Ioan; Buzatu, Gheorghe - <em>Istoria românilor în secolul XX</em>, Editura Paideia, București, 1999</li>
+                        <li>Duțu, Alexandru - <em>Între Wehrmacht și Armata Roșie</em>, Editura Enciclopedică, București, 2000</li>
+                        <li>Constantiniu, Florin - <em>O istorie sinceră a poporului român</em>, Editura Univers Enciclopedic, București, 1997</li>
+                    </ul>
+                    
+                    <h3>Webografie:</h3>
+                    <ul class="bibliography-list">
+                        <li><a href="https://www.mnir.ro/expozitii/al-doilea-razboi-mondial/" target="_blank">Muzeul Național de Istorie a României - Expoziția "România în Al Doilea Război Mondial"</a></li>
+                        <li><a href="https://www.historia.ro/sectiune/general/articol/romania-in-al-doilea-razboi-mondial" target="_blank">Historia.ro - România în Al Doilea Război Mondial</a></li>
+                        <li><a href="https://www.europeana.eu/ro/collections/topic/83-world-war-ii" target="_blank">Europeana - Colecția Al Doilea Război Mondial</a></li>
+                        <li><a href="https://www.mapn.ro/istorie/al_doilea_razboi_mondial/" target="_blank">Ministerul Apărării Naționale - Pagina dedicată celui de-al Doilea Război Mondial</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=TUoJMSRzs9U" target="_blank">Documentar YouTube: România în Al Doilea Război Mondial</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Al Doilea Război Mondial și România (1939-1945)</h3>
+                <p>Proiect școlar realizat de elevii Colegiului Național "Petru Rareș" Beclean</p>
+                <p>Coordonator: Prof. Filip Florean</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigare rapidă</h4>
+                <ul>
+                    <li><a href="#carousel-container">Acasă</a></li>
+                    <li><a href="#video-section">Video</a></li>
+                    <li><a href="#quiz-section">Quiz</a></li>
+                    <li><a href="#bibliografie">Bibliografie</a></li>
+                </ul>
+            </div>
+            <div class="footer-credits">
+                <h4>Realizat de:</h4>
+                <ul>
+                    <li>Toma Alex</li>
+                    <li>Marga Luiza</li>
+                    <li>Bălan Timotei</li>
+                    <li>Mureșan Paula</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Colegiul Național "Petru Rareș" Beclean. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

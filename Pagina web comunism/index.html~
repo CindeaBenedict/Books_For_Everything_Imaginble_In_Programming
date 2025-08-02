@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunismul în România (1945-1989)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="animated-background">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+    </div>
+    <header>
+        <h1>Comunismul în România</h1>
+        <p class="subtitle">O perioadă istorică controversată (1945-1989)</p>
+        <div class="authors-info">
+            <p class="students">Realizat de: Cîrceie Alisia, Clapa Alexandra, Săsărman Gabriela, Sfechiș Bogdan</p>
+            <p class="class-info">Colegiul Național Petru Rareș - Clasa a 11-a I</p>
+            <p class="teacher">Profesor coordonator: Filip Florean</p>
+        </div>
+        <div id="particles-js"></div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introducere">Introducere</a></li>
+            <li><a href="#instaurare">Instaurarea regimului</a></li>
+            <li><a href="#ceausescu">Era Ceaușescu</a></li>
+            <li><a href="#viata-cotidiana">Viața cotidiană</a></li>
+            <li><a href="#represiune">Represiunea</a></li>
+            <li><a href="#revolutie">Revoluția din 1989</a></li>
+        </ul>
+    </nav>
+
+    <div class="video-container">
+    <h2>Video documentar: Comunismul în România</h2>
+    <div class="responsive-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/uUbN6DXJwFg" title="Documentar despre comunismul în România" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="video-description">Acest documentar prezintă o imagine de ansamblu asupra perioadei comuniste din România, de la instaurarea regimului până la căderea sa în 1989.</p>
+</div>
+
+    <main>
+        <section id="introducere" class="section-container">
+            <div class="section-header" onclick="toggleSection('introducere-content')">
+                <h2>Introducere în istoria comunismului românesc</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="introducere-content" class="section-content">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>Comunismul în România a reprezentat o perioadă de aproape 45 de ani (1945-1989) în care țara a fost condusă de Partidul Comunist Român (PCR). Această perioadă a fost marcată de transformări radicale ale societății, economiei și culturii românești.</p>
+                        <p>Regimul comunist din România a fost unul dintre cele mai represive din blocul estic, în special în timpul conducerii lui Nicolae Ceaușescu (1965-1989). Deși inițial a fost instalat cu sprijinul Uniunii Sovietice, regimul a dezvoltat ulterior o politică de independență relativă față de Moscova.</p>
+                        <p>Principalele caracteristici ale comunismului românesc au inclus:</p>
+                        <ul>
+                            <li>Naționalizarea proprietăților private</li>
+                            <li>Colectivizarea agriculturii</li>
+                            <li>Industrializarea forțată</li>
+                            <li>Controlul strict al vieții sociale și culturale</li>
+                            <li>Cultul personalității liderilor (în special al lui Ceaușescu)</li>
+                            <li>Represiunea oponenților politici</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="comunism.jpg" alt="Imagine reprezentativă pentru perioada comunistă din România">
+                        <p class="caption">Imagine reprezentativă pentru perioada comunistă din România</p>
+                    </div>
+                </div>
+                <div class="quiz-container">
+                    <h3>Quiz: Introducere în comunismul românesc</h3>
+                    <div id="quiz-introducere" class="quiz">
+                        <!-- Quiz-ul va fi generat prin JavaScript -->
+                    </div>
+                    <div class="quiz-buttons">
+                        <button onclick="checkAnswers('introducere')" class="check-btn">Verifică răspunsurile</button>
+                        <button onclick="resetQuiz('introducere')" class="reset-btn">Resetează quiz-ul</button>
+                    </div>
+                    <div id="score-introducere" class="score"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="instaurare" class="section-container">
+            <div class="section-header" onclick="toggleSection('instaurare-content')">
+                <h2>Instaurarea regimului comunist (1945-1965)</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="instaurare-content" class="section-content">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>După cel de-al Doilea Război Mondial, România a intrat în sfera de influență sovietică. Instaurarea regimului comunist a fost un proces gradual, care a culminat cu abdicarea forțată a Regelui Mihai I în decembrie 1947 și proclamarea Republicii Populare Române.</p>
+                        <p>Gheorghe Gheorghiu-Dej a fost primul lider comunist important al României, conducând țara între 1947 și 1965. Sub conducerea sa, România a trecut prin:</p>
+                        <ul>
+                            <li>Eliminarea opoziției politice și a elitelor interbelice</li>
+                            <li>Naționalizarea principalelor mijloace de producție (11 iunie 1948)</li>
+                            <li>Colectivizarea agriculturii (1949-1962), proces care a întâmpinat rezistență din partea țăranilor</li>
+                            <li>Industrializarea accelerată, cu accent pe industria grea</li>
+                            <li>Represiunea politică prin intermediul Securității (înființată în 1948)</li>
+                        </ul>
+                        <p>În anii '50, mii de oameni au fost arestați și trimiși în închisori politice precum Sighet, Aiud, Gherla sau în lagăre de muncă forțată precum cele de la Canalul Dunăre-Marea Neagră.</p>
+                        <p>Spre sfârșitul conducerii sale, Gheorghiu-Dej a început să promoveze o politică de distanțare față de Uniunea Sovietică, tendință care va fi continuată și amplificată de succesorul său, Nicolae Ceaușescu.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="gheorghe.jpg" alt="Gheorghe Gheorghiu-Dej și liderii comuniști din perioada instaurării regimului">
+                        <p class="caption">Gheorghe Gheorghiu-Dej și liderii comuniști din perioada instaurării regimului</p>
+                    </div>
+                </div>
+                <div class="quiz-container">
+                    <h3>Quiz: Instaurarea regimului comunist</h3>
+                    <div id="quiz-instaurare" class="quiz">
+                        <!-- Quiz-ul va fi generat prin JavaScript -->
+                    </div>
+                    <div class="quiz-buttons">
+                        <button onclick="checkAnswers('instaurare')" class="check-btn">Verifică răspunsurile</button>
+                        <button onclick="resetQuiz('instaurare')" class="reset-btn">Resetează quiz-ul</button>
+                    </div>
+                    <div id="score-instaurare" class="score"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ceausescu" class="section-container">
+            <div class="section-header" onclick="toggleSection('ceausescu-content')">
+                <h2>Era Ceaușescu (1965-1989)</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="ceausescu-content" class="section-content">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>Nicolae Ceaușescu a preluat conducerea Partidului Comunist Român după moartea lui Gheorghiu-Dej în 1965. Inițial, regimul său a părut mai liberal, câștigând popularitate prin:</p>
+                        <ul>
+                            <li>Condamnarea invaziei sovietice în Cehoslovacia (1968)</li>
+                            <li>Deschiderea către Occident și stabilirea de relații diplomatice cu țări precum SUA și Germania de Vest</li>
+                            <li>Relaxarea relativă a controlului asupra vieții culturale</li>
+                        </ul>
+                        <p>Însă, începând cu anii '70, regimul a devenit tot mai autoritar și izolat. Ceaușescu a implementat:</p>
+                        <ul>
+                            <li>Cultul personalității - el și soția sa, Elena, erau prezentați ca figuri mesianic-paternaliste</li>
+                            <li>"Tezele din iulie" (1971) - care au marcat revenirea la un control ideologic strict asupra culturii</li>
+                            <li>Proiecte megalomanice precum Casa Poporului (actuala Casă a Parlamentului)</li>
+                            <li>Politica de industrializare forțată și de achitare a datoriei externe</li>
+                            <li>Programul de sistematizare rurală - care viza demolarea satelor și mutarea populației în blocuri</li>
+                            <li>Politica demografică - interzicerea avorturilor prin Decretul 770 din 1966</li>
+                        </ul>
+                        <p>Anii '80 au fost marcați de o criză economică severă, cu raționalizarea alimentelor și a energiei electrice, în timp ce regimul continua să exporte produse pentru a achita datoria externă.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="ceausescu.jpg" alt="Nicolae și Elena Ceaușescu în timpul unei vizite oficiale">
+                        <p class="caption">Nicolae și Elena Ceaușescu în timpul unei vizite oficiale</p>
+                    </div>
+                </div>
+                <div class="quiz-container">
+                    <h3>Quiz: Era Ceaușescu</h3>
+                    <div id="quiz-ceausescu" class="quiz">
+                        <!-- Quiz-ul va fi generat prin JavaScript -->
+                    </div>
+                    <div class="quiz-buttons">
+                        <button onclick="checkAnswers('ceausescu')" class="check-btn">Verifică răspunsurile</button>
+                        <button onclick="resetQuiz('ceausescu')" class="reset-btn">Resetează quiz-ul</button>
+                    </div>
+                    <div id="score-ceausescu" class="score"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="viata-cotidiana" class="section-container">
+            <div class="section-header" onclick="toggleSection('viata-cotidiana-content')">
+                <h2>Viața cotidiană în comunism</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="viata-cotidiana-content" class="section-content">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>Viața de zi cu zi în România comunistă a fost marcată de numeroase provocări și contradicții. Iată câteva aspecte definitorii:</p>
+                        <h4>Locuințele</h4>
+                        <p>Majoritatea populației urbane locuia în blocuri de apartamente construite în stil sovietic, cunoscute pentru standardizare și lipsa de confort. Totuși, accesul la locuințe era mai facil decât în perioada post-comunistă.</p>
+                        <h4>Alimentația</h4>
+                        <p>În anii '80, alimentele de bază erau raționalizate, iar cozile la magazine erau un fenomen cotidian. Mulți români depindeau de agricultura de subzistență sau de piața neagră pentru a-și completa necesarul de alimente.</p>
+                        <h4>Educația și munca</h4>
+                        <p>Educația era gratuită și accesibilă tuturor, dar puternic ideologizată. Șomajul oficial nu exista, dar productivitatea muncii era scăzută. Mulți români lucrau în fabrici sau în agricultură colectivizată.</p>
+                        <h4>Timpul liber</h4>
+                        <p>Activitățile recreative erau limitate, dar accesibile: excursii organizate de sindicate, vizite la case de cultură, cinematografe cu prețuri modice. Televiziunea difuza doar 2 ore pe zi în anii '80, majoritatea timpului fiind dedicată propagandei.</p>
+                        <h4>Sănătatea</h4>
+                        <p>Sistemul medical era gratuit și accesibil tuturor, dar suferea de lipsă de medicamente și tehnologie modernă, în special în anii '80.</p>
+                        <h4>Controlul social</h4>
+                        <p>Securitatea și rețeaua sa de informatori mențineau un control strict asupra populației. Criticile la adresa regimului puteau duce la represalii, de la pierderea locului de muncă până la închisoare.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="index.jpeg" alt="Coadă la alimente în anii '80">
+                        <p class="caption">Coadă la alimente în anii '80, o imagine tipică a vieții cotidiene din perioada comunistă</p>
+                    </div>
+                </div>
+                <div class="quiz-container">
+                    <h3>Quiz: Viața cotidiană în comunism</h3>
+                    <div id="quiz-viata-cotidiana" class="quiz">
+                        <!-- Quiz-ul va fi generat prin JavaScript -->
+                    </div>
+                    <div class="quiz-buttons">
+                        <button onclick="checkAnswers('viata-cotidiana')" class="check-btn">Verifică răspunsurile</button>
+                        <button onclick="resetQuiz('viata-cotidiana')" class="reset-btn">Resetează quiz-ul</button>
+                    </div>
+                    <div id="score-viata-cotidiana" class="score"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="represiune" class="section-container">
+            <div class="section-header" onclick="toggleSection('represiune-content')">
+                <h2>Represiunea și rezistența</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="represiune-content" class="section-content">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>Regimul comunist din România a folosit diverse forme de represiune pentru a-și consolida puterea și a elimina opoziția. Principalul instrument al represiunii a fost Securitatea (Departamentul Securității Statului), înființată în 1948.</p>
+                        <h4>Forme de represiune:</h4>
+                        <ul>
+                            <li><strong>Închisori politice</strong> - Sighet, Aiud, Gherla, Pitești, Râmnicu Sărat, unde deținuții politici erau supuși torturii fizice și psihice</li>
+                            <li><strong>Experimentul Pitești</strong> (1949-1952) - un program brutal de "reeducare" a deținuților politici</li>
+                            <li><strong>Deportări</strong> în Bărăgan (1951-1956) - mii de familii din zona de frontieră cu Iugoslavia au fost strămutate forțat</li>
+                            <li><strong>Lagăre de muncă forțată</strong> - precum cele de la Canalul Dunăre-Marea Neagră, unde au murit mii de deținuți</li>
+                            <li><strong>Domiciliu forțat</strong> pentru foștii membri ai elitei interbelice</li>
+                            <li><strong>Supravegherea populației</strong> prin rețele de informatori</li>
+                        </ul>
+                        <h4>Rezistența anticomunistă:</h4>
+                        <p>În ciuda represiunii, au existat diverse forme de rezistență:</p>
+                        <ul>
+                            <li><strong>Rezistența armată în munți</strong> - grupuri de partizani care au luptat împotriva regimului până la începutul anilor '60</li>
+                            <li><strong>Revolta minerilor din Valea Jiului</strong> (1977)</li>
+                            <li><strong>Mișcarea Goma</strong> pentru drepturile omului (1977)</li>
+                            <li><strong>Greva muncitorilor de la Brașov</strong> (1987)</li>
+                            <li><strong>Disidenți</strong> precum Paul Goma, Doina Cornea, Gheorghe Ursu, Radu Filipescu</li>
+                            <li><strong>Forme cotidiene de rezistență</strong> - bancuri politice, ascultarea posturilor de radio străine (Europa Liberă, Vocea Americii)</li>
+                        </ul>
+                    </div>
+                    <div class="image-container">
+                        <img src="sighet.jpg" alt="Memorialul victimelor comunismului de la Sighet">
+                        <p class="caption">Memorialul victimelor comunismului de la Sighet</p>
+                    </div>
+                </div>
+                <div class="quiz-container">
+                    <h3>Quiz: Represiunea și rezistența</h3>
+                    <div id="quiz-represiune" class="quiz">
+                        <!-- Quiz-ul va fi generat prin JavaScript -->
+                    </div>
+                    <div class="quiz-buttons">
+                        <button onclick="checkAnswers('represiune')" class="check-btn">Verifică răspunsurile</button>
+                        <button onclick="resetQuiz('represiune')" class="reset-btn">Resetează quiz-ul</button>
+                    </div>
+                    <div id="score-represiune" class="score"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="revolutie" class="section-container">
+            <div class="section-header" onclick="toggleSection('revolutie-content')">
+                <h2>Revoluția din 1989</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div id="revolutie-content" class="section-content">
+                <div class="content-wrapper">
+                    <div class="text-content">
+                        <p>Regimul comunist din România s-a prăbușit în decembrie 1989, în contextul căderii regimurilor comuniste din Europa de Est. Revoluția română a fost singura violentă din blocul estic, soldându-se cu peste 1.100 de morți.</p>
+                        <h4>Cronologia evenimentelor:</h4>
+                        <ul>
+                            <li><strong>16 decembrie 1989</strong> - Protestele încep la Timișoara, în jurul casei pastorului reformat László Tőkés</li>
+                            <li><strong>17-18 decembrie</strong> - Demonstrațiile se extind în Timișoara; regimul răspunde cu forța, rezultând primele victime</li>
+                            <li><strong>21 decembrie</strong> - Ceaușescu organizează un miting în București care se transformă într-o demonstrație împotriva sa</li>
+                            <li><strong>22 decembrie</strong> - Ceaușescu fuge cu elicopterul din sediul CC al PCR; armata fraternizează cu demonstranții; se formează Frontul Salvării Naționale (FSN)</li>
+                            <li><strong>22-25 decembrie</strong> - Lupte de stradă între forțele loiale regimului (presupuși "teroriști") și armată/civili înarmați</li>
+                            <li><strong>25 decembrie</strong> - Nicolae și Elena Ceaușescu sunt judecați sumar și executați la Târgoviște</li>
+                        </ul>
+                        <h4>Controverse:</h4>
+                        <p>Revoluția română rămâne subiect de controverse istorice:</p>
+                        <ul>
+                            <li>A fost o revoluție autentică sau o lovitură de stat?</li>
+                            <li>Cine au fost "teroriștii" care au tras după fuga lui Ceaușescu?</li>
+                            <li>Care a fost rolul serviciilor secrete străine?</li>
+                            <li>În ce măsură FSN, dominat de foști membri ai nomenclaturii comuniste, a confiscat revoluția?</li>
+                        </ul>
+                        <p>Indiferent de aceste controverse, Revoluția din 1989 a marcat sfârșitul oficial al regimului comunist în România și începutul tranziției către democrație și economia de piață.</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="piata.jpg" alt="Demonstranți în Piața Universității, decembrie 1989">
+                        <p class="caption">Demonstranți în Piața Universității, decembrie 1989</p>
+                    </div>
+                </div>
+                <div class="quiz-container">
+                    <h3>Quiz: Revoluția din 1989</h3>
+                    <div id="quiz-revolutie" class="quiz">
+                        <!-- Quiz-ul va fi generat prin JavaScript -->
+                    </div>
+                    <div class="quiz-buttons">
+                        <button onclick="checkAnswers('revolutie')" class="check-btn">Verifică răspunsurile</button>
+                        <button onclick="resetQuiz('revolutie')" class="reset-btn">Resetează quiz-ul</button>
+                    </div>
+                    <div id="score-revolutie" class="score"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="bibliografie-webografie" class="section-container">
+        <div class="section-header" onclick="toggleSection('bibliografie-webografie-content')">
+            <h2>Bibliografie și Webografie</h2>
+            <span class="toggle-icon">+</span>
+        </div>
+        <div id="bibliografie-webografie-content" class="section-content">
+            <div class="content-wrapper">
+                <div class="text-content full-width">
+                    <h4>Bibliografie:</h4>
+                    <ul class="bibliography-list">
+                        <li>Deletant, Dennis - <em>România sub regimul comunist</em>, Fundația Academia Civică, București, 2006</li>
+                        <li>Tismăneanu, Vladimir - <em>Stalinism pentru eternitate: O istorie politică a comunismului românesc</em>, Polirom, Iași, 2005</li>
+                        <li>Boia, Lucian - <em>Strania istorie a comunismului românesc</em>, Humanitas, București, 2016</li>
+                        <li>Cesereanu, Ruxandra - <em>Comunism și represiune în România</em>, Polirom, Iași, 2006</li>
+                        <li>Betea, Lavinia - <em>Viața cotidiană în timpul lui Ceaușescu</em>, Polirom, Iași, 2015</li>
+                    </ul>
+                    
+                    <h4>Webografie:</h4>
+                    <ul class="bibliography-list">
+                        <li><a href="https://www.memorialsighet.ro/" target="_blank">Memorialul Victimelor Comunismului și al Rezistenței</a></li>
+                        <li><a href="https://www.iiccr.ro/" target="_blank">Institutul de Investigare a Crimelor Comunismului și Memoria Exilului Românesc</a></li>
+                        <li><a href="https://www.historia.ro/sectiune/general/articol/comunismul-in-romania" target="_blank">Historia.ro - Comunismul în România</a></li>
+                        <li><a href="https://www.europeana.eu/ro/collections/topic/83-1989-fall-of-the-iron-curtain" target="_blank">Europeana - Căderea Cortinei de Fier</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=uUbN6DXJwFg" target="_blank">Documentar YouTube: Comunismul în România</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Pagină educațională despre istoria comunismului în România</p>
+        <p>Proiect școlar realizat de elevii clasei a XI-a I sub îndrumarea prof. Filip Florean</p>
+        <p>Această pagină are scop educativ și prezintă informații istorice despre perioada comunistă din România (1945-1989).</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

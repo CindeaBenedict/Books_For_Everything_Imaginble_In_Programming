@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap'); /* Jersey 25 font */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Arcade font */
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 50%, #1a1a3d, #000000, #0d0d1a, #000000);
+            position: relative;
+            z-index: 1;
+        }
+        
+        #stars-bg {
+            width: 100%;
+            height: 45%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        #terrain-bg {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0); /* Transparent background to reveal stars */
+        }
+
+        /* 404 Text Styling */
+        .not-found-text {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Jersey 25', sans-serif; /* Jersey 25 font style */
+            font-size: 100px;
+            color: #ff00ff;
+            background: linear-gradient(45deg, #4b0082, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 4px 4px 0px #000000, 2px 2px 5px #ff00ff;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Robot Icon Styling */
+        .robot-icon {
+            width: 80px;
+            height: 80px;
+            fill: url(#grad1);
+            filter: drop-shadow(2px 2px 5px #ff00ff);
+            transform: rotate(-15deg); /* Slight angle for the icon */
+            image-rendering: pixelated; /* Pixelated effect for the icon */
+        }
+
+        /* Gradient definition for robot icon */
+        .not-found-text svg {
+            fill: url(#grad1);
+        }
+
+        /* Home Button Styling */
+        #backButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-family: 'Press Start 2P', sans-serif;
+            font-size: 48px;
+            color: #ffffff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px #000000;
+            z-index: 2;
+        }
+
+        #backButton svg {
+            width: 48px;
+            height: 48px;
+            fill: #ffffff;
+            filter: drop-shadow(2px 2px 5px #000000);
+        }
+
+        /* Game Box Styling (invisible) */
+        #game-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1; /* Fully visible */
+            transition: opacity 0.3s ease;
+            z-index: 3;
+            background: none; /* Make the game box invisible */
+        }
+
+        /* Scoreboard and buttons */
+        #scoreBoard {
+            text-align: center;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        
+        .gameButton {
+            padding: 15px;
+            width: 80px;
+            height: 80px;
+            background: none;
+            color: #ffffff;
+            font-size: 32px;
+            border: none;
+            cursor: pointer;
+            text-shadow: 2px 2px #000000;
+            margin: 10px;
+            font-family: 'Press Start 2P', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            image-rendering: pixelated; /* Pixelated effect for the icons */
+        }
+
+        #gameOverScreen {
+            display: none;
+            text-align: center;
+            color: #ff0000;
+            font-size: 28px;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+
+        /* Game Canvas */
+        #gameCanvas {
+            border: 3px solid #ff00ff;
+            background-color: #000;
+            display: none;
+            box-shadow: 0px 0px 20px #ff00ff;
+        }
+
+        /* Welcome Text Styling */
+        #welcomeCharacter {
+            width: 420px;
+            height: 420px;
+            margin-bottom: 20px;
+        }
+
+        /* Speech Bubble Styling */
+        #speechBubble {
+            position: absolute;
+            top: 18%;
+            left: 65%;
+            transform: translate(-50%, -70%);
+            width: 430px;
+            height: 160px;
+            z-index: 4;
+        }
+    </style>
+</head>
+<body>
+    <div id="stars-bg"></div>
+    <div id="terrain-bg"></div>
+    
+    <!-- 404 Message with Robot Icon -->
+    <div class="not-found-text" style="" >
+        ERROR: 4
+        <svg xmlns="http://www.w3.org/2000/svg" class="robot-icon" viewBox="0 0 16 16">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4b0082;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135"/>
+            <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"/>
+        </svg>
+        4
+        <!-- Home Button -->
+        <button id="backButton">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path d="M8 0L0 8h3v8h4V10h2v6h4V8h3L8 0z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Game Box -->
+    <div id="game-box">
+        <img id="welcomeCharacter" src="SNake_game.png" alt="Welcome Character">
+        <img id="speechBubble" src="pixel-speech-bubble.gif" alt="Speech Bubble">
+        <button id="startButton" class="gameButton">
+            &#9654; <!-- Play button: Triangle symbol -->
+        </button>
+        <div id="scoreBoard" style="display: none;">Score: 0</div>
+        <button id="restartButton" class="gameButton" style="display: none;">
+            &#8635; <!-- Restart button: Circular arrow symbol -->
+        </button>
+        <div id="gameOverScreen" style="display: none;">Game Over! <br> Your Score: <span id="finalScore">0</span></div>
+        <canvas id="gameCanvas" width="400" height="400" style="display: none;"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script type="module">
+        import { tsParticles } from "https://cdn.jsdelivr.net/npm/@tsparticles/engine@3.0.0/+esm";
+        import { loadAll } from "https://cdn.jsdelivr.net/npm/@tsparticles/all@3.0.0/+esm";
+
+        (async () => {
+            await loadAll(tsParticles);
+            await tsParticles.addPreset("interactiveParticles", {
+                fullScreen: {
+                    enable: false
+                },
+                particles: {
+                    color: {
+                        value: ["#ffffff", "#ffff66", "#ffcc00", "#ffe680"]
+                    },
+                    links: {
+                        enable: true,
+                        distance: 120,
+                        color: "#ffffff",
+                        opacity: 0.4,
+                        width: 1,
+                        triangles: {
+                            enable: true,
+                            frequency: 0.005,
+                        },
+                    },
+                    move: {
+                        enable: true,
+                        speed: 0.5,
+                    },
+                    interactivity: {
+                        detectsOn: "canvas",
+                        events: {
+                            onhover: {
+                                enable: true,
+                                mode: "grab",
+                            },
+                            onclick: {
+                                enable: true,
+                                mode: "push",
+                            },
+                            resize: true
+                        },
+                        modes: {
+                            grab: {
+                                distance: 140,
+                                lineLinked: {
+                                    opacity: 1
+                                }
+                            },
+                            push: {
+                                particles_nb: 4
+                            }
+                        }
+                    },
+                    number: {
+                        value: 100
+                    },
+                    opacity: {
+                        value: {
+                            min: 0.3,
+                            max: 1
+                        }
+                    },
+                    shape: {
+                        type: ["circle", "square", "triangle", "polygon"],
+                        options: {
+                            polygon: [
+                                { sides: 5 },
+                                { sides: 6 },
+                                { sides: 8 }
+                            ]
+                        }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: {
+                            enable: false,
+                            speed: 20,
+                            size_min: 0.1,
+                            sync: false
+                        }
+                    }
+                }
+            });
+
+            await tsParticles.load({
+                id: "stars-bg",
+                options: {
+                    preset: "interactiveParticles",
+                    particles: {
+                        color: { value: ["#ffffff", "#ffff66", "#ffcc00", "#ffe680"] },
+                        links: { color: "#ffffff" }
+                    }
+                }
+            });
+        })();
+
+        let scene, camera, renderer, terrain;
+        let simplex = new SimplexNoise();
+        let movementSpeed = 0.003;
+        let sharpness = 300;
+        let cycle = 0;
+
+        function init() {
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 20000);
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.getElementById('terrain-bg').appendChild(renderer.domElement);
+
+            camera.position.set(0, 150, 500);
+            camera.lookAt(0, 0, -1000);
+
+            const geometry = new THREE.PlaneGeometry(20000, 4000, 300, 100);
+            const material = new THREE.MeshBasicMaterial({
+                vertexColors: true,
+                wireframe: true
+            });
+
+            terrain = new THREE.Mesh(geometry, material);
+            terrain.rotation.x = -Math.PI / 3;
+            terrain.position.y = -200;
+            terrain.position.z = -1500;
+            scene.add(terrain);
+
+            const colors = [];
+            for (let i = 0; i < terrain.geometry.attributes.position.count; i++) {
+                const y = terrain.geometry.attributes.position.getY(i);
+                const color = new THREE.Color(0xff00ff).lerp(new THREE.Color(0x00ffff), (y + 2000) / 4000);
+                colors.push(color.r, color.g, color.b);
+            }
+            terrain.geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+
+            scene.fog = new THREE.Fog(0x000000, 300, 4000);
+
+            window.addEventListener('resize', onWindowResize, false);
+
+            animate();
+        }
+
+        function moveTerrain() {
+            const vertices = terrain.geometry.attributes.position.array;
+            const factor = 1000;
+
+            for (let i = 0; i < vertices.length; i += 3) {
+                const x = vertices[i];
+                const y = vertices[i + 1];
+                
+                const xoff = (x / factor);
+                const yoff = (y / factor) + cycle;
+
+                vertices[i + 2] = simplex.noise2D(xoff, yoff) * sharpness;
+            }
+            terrain.geometry.attributes.position.needsUpdate = true;
+            
+            cycle -= movementSpeed;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            moveTerrain();
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        init();
+    </script>
+
+    <script type="module">
+        class SnakeGame {
+            constructor(canvas, scoreBoard, gameOverScreen, finalScoreDisplay, startButton, restartButton, welcomeText, speechBubble) {
+                this.canvas = canvas;
+                this.ctx = canvas.getContext("2d");
+                this.scoreBoard = scoreBoard;
+                this.gameOverScreen = gameOverScreen;
+                this.finalScoreDisplay = finalScoreDisplay;
+                this.startButton = startButton;
+                this.restartButton = restartButton;
+                this.welcomeText = welcomeText;
+                this.speechBubble = speechBubble;
+                this.score = 0;
+                this.snake = [{ x: 200, y: 200 }];
+                this.direction = { x: 20, y: 0 };
+                this.food = { x: 300, y: 300 };
+                this.speed = 150;
+                this.interval = null;
+            }
+
+            start() {
+                this.resetGame();
+                this.interval = setInterval(() => this.updateGame(), this.speed);
+            }
+
+            resetGame() {
+                this.score = 0;
+                this.snake = [{ x: 200, y: 200 }];
+                this.direction = { x: 20, y: 0 };
+                this.placeFood();
+                this.scoreBoard.textContent = `Score: ${this.score}`;
+                this.canvas.style.display = "block";
+                this.gameOverScreen.style.display = "none";
+                this.startButton.style.display = "none";
+                this.restartButton.style.display = "none";
+                this.welcomeText.style.display = "none";
+                this.speechBubble.style.display = "none";
+            }
+
+            placeFood() {
+                this.food.x = Math.floor(Math.random() * this.canvas.width / 20) * 20;
+                this.food.y = Math.floor(Math.random() * this.canvas.height / 20) * 20;
+            }
+
+            updateGame() {
+                if (this.gameOver()) {
+                    this.endGame();
+                } else {
+                    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                    this.drawFood();
+                    this.moveSnake();
+                    this.drawSnake();
+                }
+            }
+
+            drawSnake() {
+                this.ctx.fillStyle = "#00ff00";
+                this.snake.forEach(part => this.ctx.fillRect(part.x, part.y, 20, 20));
+            }
+
+            moveSnake() {
+                const newHead = { x: this.snake[0].x + this.direction.x, y: this.snake[0].y + this.direction.y };
+                this.snake.unshift(newHead);
+
+                if (newHead.x === this.food.x && newHead.y === this.food.y) {
+                    this.score += 10;
+                    this.scoreBoard.textContent = `Score: ${this.score}`;
+                    this.placeFood();
+                    clearInterval(this.interval);
+                    this.speed = Math.max(50, this.speed - 10);
+                    this.interval = setInterval(() => this.updateGame(), this.speed);
+                } else {
+                    this.snake.pop();
+                }
+            }
+
+            drawFood() {
+                this.ctx.fillStyle = "#ff0000";
+                this.ctx.fillRect(this.food.x, this.food.y, 20, 20);
+            }
+
+            gameOver() {
+                const [head, ...body] = this.snake;
+                return body.some(part => part.x === head.x && part.y === head.y) ||
+                    head.x < 0 || head.x >= this.canvas.width || head.y < 0 || head.y >= this.canvas.height;
+            }
+
+            endGame() {
+                clearInterval(this.interval);
+                this.finalScoreDisplay.textContent = this.score;
+                this.canvas.style.display = "none";
+                this.gameOverScreen.style.display = "block";
+                this.restartButton.style.display = "block";
+                this.startButton.style.display = "none";
+            }
+        }
+
+        const canvas = document.getElementById("gameCanvas");
+        const scoreBoard = document.getElementById("scoreBoard");
+        const gameOverScreen = document.getElementById("gameOverScreen");
+        const finalScoreDisplay = document.getElementById("finalScore");
+        const startButton = document.getElementById("startButton");
+        const restartButton = document.getElementById("restartButton");
+        const backButton = document.getElementById("backButton");
+        const welcomeText = document.getElementById("welcomeCharacter");
+        const speechBubble = document.getElementById("speechBubble");
+
+        const game = new SnakeGame(canvas, scoreBoard, gameOverScreen, finalScoreDisplay, startButton, restartButton, welcomeText, speechBubble);
+
+        startButton.addEventListener("click", () => game.start());
+        restartButton.addEventListener("click", () => game.start());
+        backButton.addEventListener("click", () => location.reload());
+
+        window.addEventListener("keydown", event => {
+            const { key } = event;
+            if (key === "ArrowUp" && game.direction.y === 0) game.direction = { x: 0, y: -20 };
+            else if (key === "ArrowDown" && game.direction.y === 0) game.direction = { x: 0, y: 20 };
+            else if (key === "ArrowLeft" && game.direction.x === 0) game.direction = { x: -20, y: 0 };
+            else if (key === "ArrowRight" && game.direction.x === 0) game.direction = { x: 20, y: 0 };
+        });
+
+        // Initial setup
+        startButton.style.display = "block";
+        backButton.style.display = "block";
+    </script>
+</body>
+</html>
